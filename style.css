@@ -42,6 +42,12 @@ body {
 .logo {
   margin: 50px 0 0 60px;
 }
+.logo p {
+  padding-top: 10px;
+  color: black;
+  font-size: 12px;
+  display: none;
+}
 
 .center {
   padding-left: 60px;
@@ -72,6 +78,7 @@ body {
   padding: 0px 30px 30px 60px;
   display: flex;
   justify-content: space-between; 
+
 }
 .footer a {
   color: black;
@@ -137,4 +144,67 @@ body {
 }
 .footer span {
   font-size: 13px;
+}
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+  .logo, .center, .form, .footer {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+  .footer a {
+    font-size: 13px;
+  }
+  .footer span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    width: 90%;
+  }
+  .footer span {
+    display: none;
+  }
+  .logo p {
+    display: block;
+  }
+  .logo, .center, .form, .footer {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .lid {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #app {
+    flex-direction: column;
+  }
+  .image, .text {
+    width: 100%;
+  }
+  .center {
+    padding: 50px 0 50px 10px;
+  }
+  .lid {
+    font-size: 30px;
+  }
+  .footer {
+    padding: 10px;
+  }
 }
