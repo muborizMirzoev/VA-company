@@ -55,7 +55,18 @@ body {
 .lid {
   font-size: 36px;
   font-weight: 400;
+  color: black;
+  flex: 1;
+  background-image: linear-gradient(to right, black 0, black 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .4s;
 }
+.lid:hover {
+  background-size: 100% 100%;
+}
+
 
 .footer {
   padding: 0px 30px 30px 60px;
@@ -73,22 +84,57 @@ body {
 }
 
 .form {
-  padding-left: 60px;
+  margin-left: 60px;
   display: block;
-  width: 100%;
+  width: 80%;
 }
 .form input, .form button, .form textarea{
-  width: 80%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 18px;
   border-radius: 10px;
 }
 
 .form input, .form textarea {
-  border: 0.5px solid #000000;
+  border: 0.4px solid #000000;
 }
+
 .form textarea {
   resize: none;
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.form button {
+  outline: none;
+  background: transparent;
+  border: 1.2px solid black;
+  color: black;
+  border: 2px solid #000000;
+}
+.form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.personal-data {
+  font-weight: 300;
+  font-size: 11px;
+  text-align: center;
+  line-height: 15px;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+
+.personal-data  a {
+  color: black;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer span {
+  font-size: 13px;
 }
