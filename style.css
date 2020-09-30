@@ -211,3 +211,9 @@ body {
     height: auto;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .footer a {
+    padding: 5px 0 5px 0;
+  }
+}
