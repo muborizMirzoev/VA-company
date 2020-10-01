@@ -54,24 +54,18 @@ body {
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
+  padding-bottom: 26px;
+  padding-right: 8px;
 }
 
 .lid {
   font-size: 36px;
   font-weight: 400;
   color: black;
-  flex: 1;
-  background-image: linear-gradient(to right, black 0, black 100%);
-  background-position: 0 1.2em;
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background .4s;
 }
-.lid:hover {
-  background-size: 100% 100%;
-}
+
 
 
 .footer {
@@ -95,6 +89,12 @@ body {
   display: block;
   width: 80%;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 .form input, .form button, .form textarea{
   width: 100%;
   padding: 10px;
@@ -109,6 +109,11 @@ body {
 .form textarea {
   resize: none;
   margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+}
+
+textarea::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -147,7 +152,14 @@ body {
 }
 
 
-
+@media screen and (max-width: 1380px) {
+  .subtitle {
+    font-size: 13px;
+  }
+  .lid {
+    font-size: 25px;
+  }
+}
 
 
 @media screen and (max-width: 1280px) {
@@ -184,12 +196,7 @@ body {
     flex-wrap: wrap;
     margin: 10px;
   }
-  .subtitle {
-    font-size: 16px;
-  }
-  .lid {
-    font-size: 26px;
-  }
+ 
 }
 @media screen and (max-width: 700px) {
   #app {
@@ -202,14 +209,19 @@ body {
     padding: 50px 0 50px 10px;
   }
   .lid {
-    font-size: 30px;
+    font-size: 24px;
   }
   .footer {
     padding: 10px;
   }
-  .image, .image img {
+  .image, .image img, .text {
     height: auto;
   }
+  .subtitle {
+    font-size: 11px;
+    padding-bottom: 11px;
+  }
+  
 }
 
 @media screen and (max-width: 380px) {
