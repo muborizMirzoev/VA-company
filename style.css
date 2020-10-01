@@ -49,18 +49,26 @@ body {
   display: none;
 }
 
-.center {
+.center{
   padding-left: 60px;
 }
+.thanks {
+  padding-left: 60px;
+  display: none;
+}
 
-.subtitle {
+.thanks__subtitel {
+  padding-top: 10px;
+} 
+
+.subtitle, .thanks__subtitel {
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 26px;
   padding-right: 8px;
 }
 
-.lid {
+.lid, .thanks__titel  {
   font-size: 36px;
   font-weight: 400;
   color: black;
@@ -89,17 +97,13 @@ body {
   display: block;
   width: 80%;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
+
 .form input, .form button, .form textarea{
   width: 100%;
   padding: 10px;
   margin-bottom: 18px;
   border-radius: 10px;
+  font-family: sans-serif;
 }
 
 .form input, .form textarea {
@@ -151,19 +155,25 @@ textarea::placeholder {
   font-size: 13px;
 }
 
+.blackZone {
+  color: red !important;
+}
+#hello {
+  display: block;
+}
 
 @media screen and (max-width: 1380px) {
-  .subtitle {
+  .subtitle, .thanks__subtitel {
     font-size: 13px;
   }
-  .lid {
+  .lid , .thanks__titel {
     font-size: 25px;
   }
 }
 
 
 @media screen and (max-width: 1280px) {
-  .logo, .center, .form, .footer {
+  .logo, .center, .form, .footer .thanks{
     margin-left: 20px;
     padding-left: 20px;
   }
@@ -185,7 +195,7 @@ textarea::placeholder {
   .logo p {
     display: block;
   }
-  .logo, .center, .form, .footer {
+  .logo, .center, .form, .footer, .thanks {
     margin-left: 10px;
     padding-left: 10px;
   }
@@ -205,10 +215,10 @@ textarea::placeholder {
   .image, .text {
     width: 100%;
   }
-  .center {
+  .center ,.thanks {
     padding: 50px 0 50px 10px;
   }
-  .lid {
+  .lid, .thanks__titel {
     font-size: 24px;
   }
   .footer {
@@ -217,7 +227,7 @@ textarea::placeholder {
   .image, .image img, .text {
     height: auto;
   }
-  .subtitle {
+  .subtitle , .thanks__subtitel{
     font-size: 11px;
     padding-bottom: 11px;
   }
