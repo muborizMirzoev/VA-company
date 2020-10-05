@@ -17,12 +17,14 @@ body {
 #app {
   height: 100vh;
   display: flex;
+  display: -webkit-box;
 }
 
 .text {
   height: 100vh;
   width: 50%;
   display: flex;
+  display: -webkit-box;
   flex-direction: column;
   justify-content: space-between;
  
@@ -79,6 +81,7 @@ body {
 .footer {
   padding: 0px 30px 30px 60px;
   display: flex;
+  display: -webkit-box;
   justify-content: space-between; 
 
 }
