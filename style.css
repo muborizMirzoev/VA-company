@@ -239,9 +239,9 @@ textarea::placeholder {
   .footer {
     padding: 10px;
   }
-  .image, .image img, .text {
+  /* .image, .image img, .text {
     height: auto;
-  }
+  } */
   .subtitle , .thanks__subtitel{
     font-size: 11px;
     padding-bottom: 11px;
