@@ -225,7 +225,11 @@ textarea::placeholder {
 }
 @media screen and (max-width: 700px) {
   #app {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
   }
   .image, .text {
     width: 100%;
@@ -239,9 +243,10 @@ textarea::placeholder {
   .footer {
     padding: 10px;
   }
-  /* .image, .image img, .text {
+  .image, .image img, .text {
     height: auto;
-  } */
+  }
+ 
   .subtitle , .thanks__subtitel{
     font-size: 11px;
     padding-bottom: 11px;
