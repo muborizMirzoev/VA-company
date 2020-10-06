@@ -64,7 +64,7 @@ body {
 }
 .thanks {
   padding-left: 60px;
-  display: none;
+  display: block;
 }
 
 .thanks__subtitel {
@@ -111,7 +111,7 @@ body {
   margin-left: 60px;
   display: block;
   width: 80%;
-  z-index: 10;
+
 }
 
 .form input, .form button, .form textarea{
